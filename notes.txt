@@ -1,0 +1,13 @@
+email
+	must be unique
+	must be valid
+username
+	must be unique
+	must be letters, numbers and _ 
+	must start with a letter
+	must have pic field
+	
+	
+password
+	must be at least 6 characters long
+	must be encrypted
