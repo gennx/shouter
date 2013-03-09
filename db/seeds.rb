@@ -5,6 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.find_or_create_by_email "test@example.com", username: "testuser"
 (1..40).each do
-  Shout.find_or_create_by_content "shout #{{i}}"
+  Shout.find_or_create_by_content "shout #{{i}}", user: User.first
 end  
+
+

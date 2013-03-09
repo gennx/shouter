@@ -1,5 +1,15 @@
 Shouter::Application.routes.draw do
-  resources :shouts
+  
+ 
+
+  devise_for :users
+
+  resources :follows, only:[]do
+    member do
+      post :follow, as: "follow"
+      delete :unfollow, as: "unfollow"
+    end
+  end    
 
 
   resources :users

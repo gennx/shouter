@@ -1,0 +1,10 @@
+<% shouts.each do |shout| %>
+	<div class="shout">
+		<%= link_to shout.user.username, shout.user %> said:
+		<%= shout.content%>
+		<div class="time"><%= time_ago_in_words shout.created_at %> ago.</div>
+	</div>	
+<% end %>
+
+
+<%= will_paginate @shouts %>

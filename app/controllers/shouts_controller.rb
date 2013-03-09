@@ -41,7 +41,7 @@ class ShoutsController < ApplicationController
   # POST /shouts.json
   def create
     @shout = Shout.new(params[:shout])
-    @shout.user_id = -1
+    @shout.user = User.first
 
     respond_to do |format|
       if @shout.save

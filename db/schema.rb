@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130213032355) do
+ActiveRecord::Schema.define(:version => 20130220031646) do
 
   create_table "shouts", :force => true do |t|
     t.integer  "user_id"
@@ -24,8 +24,9 @@ ActiveRecord::Schema.define(:version => 20130213032355) do
     t.string   "username"
     t.string   "email"
     t.string   "password"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
+  
 
 end

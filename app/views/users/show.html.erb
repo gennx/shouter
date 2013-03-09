@@ -1,2 +1,4 @@
 
 <%= user_view @user %>
+
+<% render partial:"shouts/shouts", locals: {shouts: @user.shouts} %>

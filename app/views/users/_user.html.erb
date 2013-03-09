@@ -1,0 +1,8 @@
+<div class= 'user>
+	<%= image_tag user.profile_iamge_url :thumb if user.profile_image? %>
+	<p><%= user.email %></p>
+	<p><%= user.username %></p>
+	<p><%= time_ago_in_words user.created_at %> ago.</p>
+	<% if user == User.first %>
+		This is you!
+	<%else %>

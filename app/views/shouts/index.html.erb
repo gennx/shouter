@@ -1,26 +1,10 @@
 <h1>Listing shouts</h1>
-	<%= will_paginate( @shouts, {:class => "digg_pagination", :previous_label => "<<"}) %>
-<table>	
-  <tr>
-    <th>Content</th>
-	<th>Created</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @shouts.each do |shout| %>
-  <tr>
-    <td><%= shout.content %></td>
-	<td><%= time_ago_in_words shout.created_at %> ago</td>
-    <td><%= link_to 'Show', shout %></td>
-    <td><%= link_to 'Edit', edit_shout_path(shout) %></td>
-    <td><%= link_to 'Destroy', shout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<%= render partial: "shouts", locals: {shouts: @shouts} %>
+
+
 
 <br />
 
 <%= link_to 'New Shout', new_shout_path %>
-<%= will_paginate( @shouts, {:class => "digg_pagination", :previous_label => "<<"}) %>
+
