@@ -1,4 +1,4 @@
-<h1>Shouter</h1>
+
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -11,12 +11,12 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+ <div class="field">
     <%= f.label :email %><br/>
 	<%= f.text_field :email%>
-  </div>
-  <div class="field">
+  </div>	
+
+ <div class="field">
     <%= f.label :username %><br/>
 	<%= f.text_field :username%>
   </div>
@@ -24,8 +24,22 @@
     <%= f.label :password %><br/>
 	<%= f.text_field :password%>
   </div>
-  <div class="actions">
+  <div class="field">
+	<%= f.label :profile_image %><br/>
+	<%= f.file_field :profile_image %>
+	</div>
+ <div class="field">
+	<%= f.label :profile_bg%><br/>
+	<%= f.text_field :profile_bg%>
+ </div>
+ <div class="field">
+	<%= f.label :profile_fg%><br/>
+	<%= f.text_field :profile_fg%>
+ </div>	
+ <div class="actions">
 	 <%= f.submit %>
   </div>
+
+
 
 <% end %>

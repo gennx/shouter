@@ -6,9 +6,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
   has_many :shouts
-  attr_accessible :email, :password, :username, :profile_bg, :profile_fg, :profile_image, :username
+  attr_accessible :email, :password, :username, :profile_bg, :profile_fg, :profile_image, :username, :password_confirmation, :remember_me
   
   validates :username, :email, presence: true, uniqueness: true
   validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+.)+[a-z]{2,})\Z/i
